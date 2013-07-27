@@ -1,0 +1,2 @@
+firstrun: 
+	python insertData.py
