@@ -1,9 +1,16 @@
 import http.server
 import socketserver
 
-Handler = http.server.SimpleHTTPRequestHandler
+def main():
+    try:
+        server = socketserver.TCPServer(("", 12000), http.server.SimpleHTTPRequestHandler)
+        print ("AWWW YEAHHH!1")
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print ("WHY?! Service killed by keyboard :(")
+        server.socket.close()
+        print ("dead.")
 
-httpd = socketserver.TCPServer(("", 12000), Handler)
-
-print("AW YEAHH! WE'RE BACK")
-httpd.serve_forever()
+if __name__ == '__main__':
+    main(); 
+    
