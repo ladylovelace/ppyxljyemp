@@ -1,4 +1,6 @@
-window.sendCnpj = (form) ->
-    input = form.cnpj.value
-    if (input) {};
-    document.getElementById("result").innerHTML = parseInt(cnpj)
+function sendCnpj(){
+	input = document.forms["form"].query.value
+    cnpj = input.replace(/[^0-9]/g, "")
+    return true;
+}
+    
