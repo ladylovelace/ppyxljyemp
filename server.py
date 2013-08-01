@@ -17,7 +17,6 @@ class httpHandler(http.server.SimpleHTTPRequestHandler):
 
     def dumpReq( self, formInput=None ):   
         response= "<html><head></head><body>"
-        response+= "<p>boo</p>"
         response+= "<p>HTTP Request</p>"
         response+= "<p>self.command= <tt>%s</tt></p>" % ( self.command )
         response+= "<p>self.path= <tt>%s</tt></p>" % ( self.path )
